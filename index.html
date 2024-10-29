@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+  <div class="zoom-in-zoom-out">
+    <h4 class="">Curious about your wedding year?</h4>
+  </div>
+
+    <div class="container">
+       
+        <div class="spinBtn">YEARS</div>
+    
+        <div id="ring">
+            <img src="img/ring_final 3.png" width="490px" alt="">
+        </div>
+        <div class="wheel">
+            <div class="number" style="--i:1; --clr:#db7093;"><span>1 Year </span> </div>
+            <div class="number" style="--i:2; --clr:#20b2aa;"><span>2 Years</span></div>
+            <div class="number" style="--i:3; --clr:#d63e92;"><span>3 Years</span></div>
+            <div class="number" style="--i:4; --clr:#daa520;"><span>4 Years </span></div>
+            <div class="number" style="--i:5; --clr:#ff340f;"><span>5 Years</span></div>
+        
+        </div>
+        <h1 id="winner">Spin to Find Out</h1>
+    </div>
+
+
+  
+<!-- Modal -->
+
+
+<!-- Modal structure -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+  
+      <div class="modal-title">Congratulations</div>
+      <div class="modal-content" id="modalContent">
+        
+      </div>
+      <a href="https://www.bharatmatrimony.com/" style="text-decoration: none;">
+      <button class="modal-button btn-grad">Know More
+      </button>
+    </a>
+  </div>
+
+
+    <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+</body>
+</html>

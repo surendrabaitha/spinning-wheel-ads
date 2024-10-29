@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%; /* Ensure the content covers the full height */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/bg\ for\ matrimony01.png') no-repeat center center;
+    background-size: cover;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    top: 0px; /* Adjust vertical positioning */
+    
+}
+
+.container .outRing{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform: scale(1.6);
+    top: 39px;
+    right: 39px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+
+.ring{
+    position: absolute;
+    top: 55px;
+}
+
+
+.container .spinBtn {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #333;
+    border: 6px solid rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.container .spinBtn::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    width: 23px;
+    height: 30px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.container .wheel {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    transition: transform 5s ease-in-out;
+    z-index: -1;
+}
+
+.container .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(72deg * var(--i)));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .wheel .number span {
+    position: relative;
+    transform: rotate(-55deg); /* Counter-rotate to keep text upright */
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+#winner {
+    position: absolute;
+    top: 418px;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px 5px;
+    font-size: 20px;
+    background-color: white;
+    /* width: 50%; */
+}
+
+
+
+
+.zoom-in-zoom-out {
+    position: fixed;
+     top: 18%; 
+     background-color: white; 
+     color: black; 
+     padding: 8px; 
+     border-radius: 6px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: center;   
+    text-align: center;
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+
+  /* modal css */
+
+    /* Overlay for modal background */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* width: 100%;
+        height: 100%; */
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        background: rgba(0, 0, 0, 0.5); 
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+      
+      }
+  
+      /* Modal box styling */
+      .modal-box {
+        /* background-color: #ffffff; */
+        /* background: url('img/modalBg.jpeg'); */
+        /* background: url('https://placehold.co/320x480'); */
+        background: url('../img/bg.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* border-radius: 12px; */
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        /* transform: scale(0.8); */
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 100px;
+      }
+  
+      /* Icon and confetti around it */
+      .modal-icon {
+        font-size: 48px;
+        color: #fbbf24;
+        margin-bottom: 10px;
+        position: relative;
+      }
+  
+      /* Title styling */
+      .modal-title {
+        font-size: 55px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-family: cursive;
+      }
+  
+      /* Paragraph styling */
+      .modal-content {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 40px;
+        line-height: 1.5;
+      }
+  
+    
+      .btn-grad {background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+           .btn-grad {
+              margin: 10px auto;
+              padding: 14px 40px;
+              text-align: center;
+              text-transform: uppercase;
+              transition: 0.5s;
+              background-size: 200% auto;
+              color: white;            
+              box-shadow: 0 0 20px #eee;
+              border-radius: 10px;
+              font-size: 16px;
+              display: block;
+              border: none;
+              text-decoration: none;
+            }
+  
+            .btn-grad:hover {
+              background-position: right center; /* change the direction of the change here */
+              color: #fff;
+              text-decoration: none;
+            }
+           
