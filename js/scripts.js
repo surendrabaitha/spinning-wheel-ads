@@ -45,22 +45,22 @@ setTimeout(()=>{
 
 
    // do this for 30 seconds
-var duration = 5 * 1000;
+var duration = 3 * 1000;
 var end = Date.now() + duration;
 
 (function frame() {
   // launch a few confetti from the left edge
   confetti({
-    particleCount: 7,
+    particleCount: 3,
     angle: 60,
-    spread: 55,
+    spread: 35,
     origin: { x: 0 }
   });
   // and launch a few from the right edge
   confetti({
-    particleCount: 7,
+    particleCount: 3,
     angle: 120,
-    spread: 55,
+    spread: 35,
     origin: { x: 1 }
   });
 
@@ -71,7 +71,7 @@ var end = Date.now() + duration;
 }());
 
 
-}, 900)
+}, 500)
 // modal for congrational
 // Show the modal using Bootstrap 5's Modal class
 
